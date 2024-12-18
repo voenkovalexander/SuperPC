@@ -2,4 +2,7 @@
 @model SuperPC.Pages.CatalogModel
 @{
 	<p>Заголовок</p>
+	foreach (var completePC in Model.completePCs){
+		<p>@completePC.Name - @completePC.VideoCard - @completePC.CPU - @completePC.RAM - @completePC.MotherPl - @completePC.Power - @completePC.Cooling - @completePC.Case - @completePC.Price</p>
+	}
 }

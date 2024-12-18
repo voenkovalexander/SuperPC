@@ -1,0 +1,74 @@
+﻿@page
+@model SuperPC.Pages.AddPCModel
+
+@{
+    ViewData["Title"] = "AddPC";
+}
+
+<h1>AddPC</h1>
+
+<h4>CompletePC</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="CompletePC.Name" class="control-label"></label>
+                <input asp-for="CompletePC.Name" class="form-control" />
+                <span asp-validation-for="CompletePC.Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CompletePC.VideoCard" class="control-label"></label>
+                <input asp-for="CompletePC.VideoCard" class="form-control" />
+                <span asp-validation-for="CompletePC.VideoCard" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CompletePC.CPU" class="control-label"></label>
+                <input asp-for="CompletePC.CPU" class="form-control" />
+                <span asp-validation-for="CompletePC.CPU" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CompletePC.RAM" class="control-label"></label>
+                <input asp-for="CompletePC.RAM" class="form-control" />
+                <span asp-validation-for="CompletePC.RAM" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CompletePC.MotherPl" class="control-label"></label>
+                <input asp-for="CompletePC.MotherPl" class="form-control" />
+                <span asp-validation-for="CompletePC.MotherPl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CompletePC.Power" class="control-label"></label>
+                <input asp-for="CompletePC.Power" class="form-control" />
+                <span asp-validation-for="CompletePC.Power" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CompletePC.Cooling" class="control-label"></label>
+                <input asp-for="CompletePC.Cooling" class="form-control" />
+                <span asp-validation-for="CompletePC.Cooling" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CompletePC.Case" class="control-label"></label>
+                <input asp-for="CompletePC.Case" class="form-control" />
+                <span asp-validation-for="CompletePC.Case" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CompletePC.Price" class="control-label"></label>
+                <input asp-for="CompletePC.Price" class="form-control" />
+                <span asp-validation-for="CompletePC.Price" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
